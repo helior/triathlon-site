@@ -28,7 +28,7 @@ div.wrapper {
   transform-style: preserve-3d;
 }
 
-#hero blockquote {
+.hero-blockquote {
   color:#fff;
 }
 

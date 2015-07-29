@@ -45,8 +45,8 @@
   });
 
   $(window).load(function() {
-    $('.video #video-bg video').append('<source src="/videos/bike.mp4" type="video/mp4"/>');
-    $('.video.no-videoh264 #video-bg video').css("display", "none");
+    $('.desktop.video #video-bg video').append('<source src="/videos/bike.mp4" type="video/mp4"/>');
+    $('.desktop.video.no-videoh264 #video-bg video').css("display", "none");
   });
 
 })(jQuery);
