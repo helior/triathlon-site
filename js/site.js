@@ -1,5 +1,10 @@
 (function($) {
 
+  var quotes = [
+    "That is Salvation. To give of love inside.<br>To keep love of life, no matter what, and to give to others. Generously.<br>— Sylvia Plath",
+    "There is another way."
+  ];
+
   var min_w = 300;
   var vid_w_orig;
   var vid_h_orig;
@@ -30,14 +35,23 @@
   }
 
   $(document).ready(function(){
+    // Remove video if we're on non-deskop browsers.
     $('.tablet #video-bg video').remove();
     $('.mobile #video-bg video').remove();
+    // Mixpanel non-deskop
 
     vid_w_orig = parseInt($('#video-bg video').attr('width'));
     vid_h_orig = parseInt($('#video-bg video').attr('height'));
     heroresize();
     $(window).resize(heroresize);
 
+    // Randomize hero quote.
+    var quote = quotes[Math.floor(Math.random()*quotes.length)];
+    // Mixpanel quote
+    $('.hero-blockquote').html(quote);
+
+
+    // Set coundown.
     $(".countdown").countdown({
       date: "31 july 2015 23:30:00", // add the countdown's end date (i.e. 3 november 2012 12:00:00)
       format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
@@ -47,6 +61,7 @@
   $(window).load(function() {
     $('.desktop.video #video-bg video').append('<source src="/videos/bike.mp4" type="video/mp4"/>');
     $('.desktop.video.no-videoh264 #video-bg video').css("display", "none");
+    // Mixpanel no-videoh264
   });
 
 })(jQuery);
