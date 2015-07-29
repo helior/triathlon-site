@@ -15,17 +15,21 @@
   background:#fff;
 }
 .strip.tint{
-  background: rgba(215,130,49,0.3);
+  background: rgba(15,30,29,0.3);
 }
 div.wrapper {
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
-  width: 80%;
+  width: 50%;
   position: relative;
   z-index: 2;
   opacity: 1;
   transform-style: preserve-3d;
+}
+
+#hero blockquote {
+  color:#fff;
 }
 
 /*Background Video*/
