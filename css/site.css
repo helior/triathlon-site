@@ -1,0 +1,92 @@
+/*Utility*/
+.valign{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*Common Helpers*/
+.strip {
+  clear: both;
+  position: relative;
+  z-index: 2;
+  zoom: 1;
+  min-height:350px;
+  background:#fff;
+}
+.strip.tint{
+  background: rgba(215,130,49,0.3);
+}
+div.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+  width: 80%;
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transform-style: preserve-3d;
+}
+
+/*Background Video*/
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  zoom: 1;
+}
+.container-for-video {
+  background: #FFF;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container-for-video video, .container-for-video img {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container-for-video img {
+  z-index: 0;
+}
+.video #video-bg img { /*Modernizr class*/
+  display: none;
+}
+@media only screen and (min-width: 680px) {
+  .home section.hero {
+    min-height: 500px;
+  }
+}
+
+/*Section: History*/
+.history-strip {
+  height:400px;
+}
+ul.countdown {
+  left: 50%;
+  width:600px;
+  margin:0;
+  list-style:none;
+}
+ul.countdown li {
+  width:24.4333%;
+  display:inline-block;
+  text-align:center;
+}
+ul.countdown li span {
+  font-size: 42px;
+  font-weight:bold;
+}
+
+/*Section: Donate*/
+.donate-strip{
+  text-align:center;
+  height:300px;
+}

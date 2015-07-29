@@ -1,13 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <script src="/js/modernizr.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
 <body>
-  <p>Hello world.</p>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <div id="video-bg">
+    <div class="container-for-video">
+      <video autoplay="autoplay" preload="auto" loop width="1920" height="1080" poster="/images/keyframe.png" webkit-playsinline>
+
+      </video>
+      <img src="=/images/keyframe.png" alt="bike ride" width="1280" height="720">
+    </div>
+  </div>
+
+  <section class="strip tint">
+    <div class="wrapper">
+      <section id="hero" class="hero">
+        <blockquote class="flow-text valign"><span>That is Salvation. To give of love inside. <br>
+          To keep love of life, no matter what, and to give to others. <br>
+          Generously.<br>
+            — Sylvia Plath</blockquote>
+      </section>
+    </div>
+  </section>
+
+  <section class="strip history-strip">
+    <ul class="countdown valign">
+      <li>
+        <span class="days"></span>
+        <p class="timeRefDays"></p>
+      </li>
+      <li>
+        <span class="hours"></span>
+        <p class="timeRefHours"></p>
+      </li>
+      <li>
+        <span class="minutes"></span>
+        <p class="timeRefMinutes"></p>
+      </li>
+      <li>
+        <span class="seconds"></span>
+        <p class="timeRefSeconds"></p>
+      </li>
+    </ul>
+  </section>
+  <section class="strip metrics-strip"></section>
+  <section class="strip message-strip"></section>
+  <section class="strip testimonial-strip"></section>
+
+  <section class="strip donate-strip">
+    <a class="valign waves-effect waves-light btn-large" href="http://nauticamalibutri2015.kintera.org/helior">Donate</a>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+  <script src="/js/jquery.countdown.min.js"></script>
+  <script src="/js/site.js"></script>
 </body>
 </html>
