@@ -1,6 +1,7 @@
 ## Triathlon-site
 
 ###### TODO:
+- Make a video
 - Mixpanel
 - favicon
 - OG metatags
