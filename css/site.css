@@ -1,8 +1,11 @@
 /*Utility*/
-.valign{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+p.with-gutter {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.center-box {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Common Helpers*/
@@ -17,6 +20,7 @@
 .strip.tint{
   background: rgba(15,30,29,0.3);
 }
+
 div.wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -74,13 +78,11 @@ div.wrapper {
   height:400px;
 }
 ul.countdown {
-  left: 50%;
-  width:600px;
   margin:0;
   list-style:none;
 }
 ul.countdown li {
-  width:24.4333%;
+  width:24%;
   display:inline-block;
   text-align:center;
 }
@@ -93,4 +95,8 @@ ul.countdown li span {
 .donate-strip{
   text-align:center;
   height:300px;
+}
+
+.donate-button {
+  margin:0 auto;
 }
