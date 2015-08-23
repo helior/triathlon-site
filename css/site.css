@@ -1,5 +1,5 @@
 /*Utility*/
-p.with-gutter {
+.with-gutter {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -89,6 +89,16 @@ ul.countdown li {
 ul.countdown li span {
   font-size: 42px;
   font-weight:bold;
+}
+
+/*Section: Metrics*/
+.metrics-strip {
+  background-color: #D8BDFF;
+}
+
+/*Section: Message*/
+.message-strip {
+  background-color:#000;
 }
 
 /*Section: Donate*/
