@@ -38,7 +38,7 @@
     // Remove video if we're on non-deskop browsers.
     $('.tablet #video-bg video').remove();
     $('.mobile #video-bg video').remove();
-    // Mixpanel non-deskop
+    // todo: Mixpanel non-deskop
 
     vid_w_orig = parseInt($('#video-bg video').attr('width'));
     vid_h_orig = parseInt($('#video-bg video').attr('height'));
@@ -47,7 +47,7 @@
 
     // Randomize hero quote.
     var quote = quotes[Math.floor(Math.random()*quotes.length)];
-    // Mixpanel quote
+    // todo: Mixpanel quote
     $('.hero-blockquote').html(quote);
 
 
@@ -57,12 +57,40 @@
       format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
     }, function() {console.log('finished')});
 
+    $('.metric-total-raised').data('percent', Math.ceil(Metrics.totalRaised / Metrics.donationGoal * 100));
+    $('.metric-survival-rate').data('percent', Math.ceil(Metrics.survivalCount / Metrics.totalInflicted * 100));
+    $('.circle-graph').easyPieChart({
+      scaleColor: false,
+      lineWidth: 4,
+      lineCap: 'round',
+      barColor: '#a378aa',
+      trackColor: '#e7b8ef' ,
+      size: 150,
+      animate: 1500,
+      onStep: function(values) {
+        // Calculate current percent of animation completion.
+        var calcPercent = Math.ceil(values[0] * 100 / this.percentage);
+
+        // Metric: Total Raised
+        if (this.el.classList.contains('metric-total-raised')) {
+          // Animate totalRaised.
+          $('b', this.el).text(numberWithCommas(Math.ceil(Metrics.totalRaised * calcPercent / 100)));
+        }
+
+        // Metric: Survival Rate
+        else if (this.el.classList.contains('metric-survival-rate')) {
+          // Animate survivalRate
+          $('b', this.el).text(Math.ceil(values[0]));
+        }
+      }
+    });
+
   });
 
   $(window).load(function() {
-    $('.desktop.video #video-bg video').append('<source src="/videos/bike.mp4" type="video/mp4"/>');
+    $('.desktop.video #video-bg video').append('<source src="videos/bike.mp4" type="video/mp4">');
     $('.desktop.video.no-videoh264 #video-bg video').css("display", "none");
-    // Mixpanel no-videoh264
+    // todo: Mixpanel no-videoh264
   });
 
 })(jQuery);
