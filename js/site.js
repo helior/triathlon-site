@@ -5,6 +5,8 @@ var Metrics = {
   survivalCount: 13820,
   totalInflicted: 15780
 };
+// Metrics (dynamic)
+Metrics.donationTotal = Math.floor(Metrics.totalRaised * 100 / Metrics.donationGoal);
 
 // Source: http://stackoverflow.com/a/2901298
 function numberWithCommas(x) {
@@ -70,7 +72,9 @@ function numberWithCommas(x) {
       format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
     }, function() {console.log('finished')});
 
-    $('.metric-total-raised').data('percent', Math.ceil(Metrics.totalRaised / Metrics.donationGoal * 100));
+    $('.metric-total-raised').data('percent', Metrics.donationTotal);
+    $('.metric-value-donation-percent').text(Metrics.donationTotal + '%');
+    $('.metric-value-donation-goal').text('$' + Metrics.donationGoal);
     $('.metric-survival-rate').data('percent', Math.ceil(Metrics.survivalCount / Metrics.totalInflicted * 100));
     $('.circle-graph').easyPieChart({
       scaleColor: false,
