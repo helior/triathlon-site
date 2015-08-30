@@ -1,3 +1,16 @@
+// Metrics
+var Metrics = {
+  totalRaised: 250,
+  donationGoal: 800,
+  survivalCount: 13820,
+  totalInflicted: 15780
+};
+
+// Source: http://stackoverflow.com/a/2901298
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 (function($) {
 
   var quotes = [

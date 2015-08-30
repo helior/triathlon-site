@@ -95,6 +95,22 @@ ul.countdown li span {
 .metrics-strip {
   background-color: #D8BDFF;
 }
+.metrics-strip .circle-graph {
+	margin: 30px;
+  float: left;
+  position:relative;
+}
+.metrics-strip .circle-graph p {
+	text-align: center;
+  padding: 10px;
+  z-index: 100;
+  line-height: 17px;
+}
+.metrics-strip canvas {
+  position: absolute;
+  top: 0;
+  left:0;
+}
 
 /*Section: Message*/
 .message-strip {
