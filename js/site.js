@@ -22,7 +22,10 @@ function numberWithCommas(x) {
 }
 
 (function($) {
-  $('.parallax').parallax();
+  var devicejs = device.noConflict();
+  if (devicejs.desktop()) {
+    $('.parallax').parallax();
+  }
 
   var min_w = 300;
   var vid_w_orig;
