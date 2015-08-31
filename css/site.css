@@ -149,6 +149,7 @@ ul.countdown li span {
 .message-strip {
   height:600px;
   color:#7893C3;
+  background: #fff url(/images/incubator.jpg) center center no-repeat;
 }
 
 .message-strip .messages {
@@ -158,6 +159,7 @@ ul.countdown li span {
 /*Section: Donate*/
 .donate-strip{
   text-align:center;
+  background:#fff url(/images/baby-hold-finger.jpg) center center no-repeat;
 }
 
 .donate-button {
