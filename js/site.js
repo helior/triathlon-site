@@ -71,8 +71,11 @@ function numberWithCommas(x) {
 
     vid_w_orig = parseInt($('#video-bg video').attr('width'));
     vid_h_orig = parseInt($('#video-bg video').attr('height'));
-    heroresize();
-    $(window).resize(heroresize);
+
+    if (devicejs.desktop()) {
+      heroresize();
+      $(window).resize(heroresize);
+    }
 
     // Randomize hero quote.
     var quote = quotes[Math.floor(Math.random()*quotes.length)];
