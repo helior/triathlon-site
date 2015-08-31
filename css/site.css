@@ -41,7 +41,7 @@ div.wrapper {
   bottom: 1px;
   right: 1px;
   font-style: italic;
-  font-size: 0.75em;
+  font-size: 0.8em;
 }
 
 /*Background Video*/
@@ -73,7 +73,8 @@ div.wrapper {
   z-index: 0;
 }
 .video #video-bg img { /*Modernizr class*/
-  display: none;
+  /*display: none;*/
+  /*Un-comment when Chrome video codec is available.*/
 }
 @media only screen and (min-width: 680px) {
   .home section.hero {
@@ -83,7 +84,7 @@ div.wrapper {
 
 /*Section: History*/
 .history-strip {
-  height:400px;
+  height:800px;
 }
 ul.countdown {
   margin:0;
@@ -101,7 +102,18 @@ ul.countdown li span {
 
 /*Section: Metrics*/
 .metrics-strip {
-  background-color: #D8BDFF;
+  background-color: #334B52;
+  height:800px;
+  color:#9AABA7;
+}
+.metrics-strip a {
+  color:#EF8188;
+}
+.metrics-strip .reference-link {
+  color:#658285;
+}
+.metrics-strip b, .metrics-strip strong {
+  color:#C0D6D1;
 }
 .metrics-strip .metric-container {
   position:relative;
@@ -130,15 +142,24 @@ ul.countdown li span {
 
 /*Section: Message*/
 .message-strip {
-  background-color:#000;
+  height:600px;
+  color:#7893C3;
+}
+
+.message-strip .messages {
+  width:600px;
 }
 
 /*Section: Donate*/
 .donate-strip{
   text-align:center;
-  height:300px;
 }
 
 .donate-button {
   margin:0 auto;
+}
+
+.credits-strip {
+  height:100px;
+  min-height:auto;
 }
