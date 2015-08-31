@@ -103,7 +103,7 @@ ul.countdown li span {
 /*Section: Metrics*/
 .metrics-strip {
   background-color: #334B52;
-  height:800px;
+  /*height:800px;*/
   color:#9AABA7;
 }
 .metrics-strip a {
@@ -118,7 +118,7 @@ ul.countdown li span {
 .metrics-strip .metric-container {
   position:relative;
   float:left;
-  margin:30px;
+  margin:25px;
   width:150px;
 }
 .metrics-strip .circle-graph {
