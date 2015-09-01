@@ -46,7 +46,7 @@ div.wrapper {
 
 /*Background Video*/
 #video-bg {
-  position: fixed;
+  /*position: fixed;*/ /*This fixes the issue with mobile; background not appearing during scroll..*/
   top: 0;
   left: 0;
   z-index: 0;
@@ -73,8 +73,7 @@ div.wrapper {
   z-index: 0;
 }
 .video #video-bg img { /*Modernizr class*/
-  /*display: none;*/
-  /*Un-comment when Chrome video codec is available.*/
+  /*display: none;*/ /*Un-comment when Chrome video codec is available.*/
 }
 @media only screen and (min-width: 680px) {
   .home section.hero {
@@ -140,13 +139,11 @@ ul.countdown li span {
 
 /*Section: Message*/
 .message-strip {
-  height:600px;
+  min-height:600px;
+  height:initial;
   color:#7893C3;
   background: #fff url(/images/incubator.jpg) center center no-repeat;
-}
-
-.message-strip .messages {
-  width:600px;
+  background-size: cover;
 }
 
 /*Section: Donate*/
