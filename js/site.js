@@ -72,8 +72,8 @@ function numberWithCommas(x) {
     vid_w_orig = parseInt($('#video-bg video').attr('width'));
     vid_h_orig = parseInt($('#video-bg video').attr('height'));
 
+    heroresize();
     if (devicejs.desktop()) {
-      heroresize();
       $(window).resize(heroresize);
     }
 
@@ -104,10 +104,10 @@ function numberWithCommas(x) {
 
     $('.circle-graph').easyPieChart({
       scaleColor: false,
-      lineWidth: 6,
+      lineWidth: 8,
       lineCap: 'round',
       barColor: '#FD777F',
-      trackColor: '#9AABA7' ,
+      trackColor: '#525252' ,
       size: 150,
       // animate: 1500,
       animate: {duration: 1000, enabled: true},

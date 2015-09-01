@@ -103,9 +103,9 @@ ul.countdown li span {
 /*Section: Metrics*/
 .metrics-strip {
   background-color: #334B52;
-  /*height:800px;*/
   color:#9AABA7;
 }
+@media only screen and (max-width: 348px) { .metrics-strip {padding-bottom:30px;}}
 .metrics-strip a {
   color:#EF8188;
 }
@@ -117,27 +117,20 @@ ul.countdown li span {
 }
 .metrics-strip .metric-container {
   position:relative;
-  margin:30px;
-  width:150px;
 }
-@media only screen and (min-width: 480px) {
-  .metrics-strip .metric-container {
-    float:left;
-    margin:45px;
-  }
-}
+
 .metrics-strip .circle-graph {
-	margin: 0 0 30px;
+	margin: 30px auto;
   position:relative;
-  float:left;
   width:150px;
   height:150px;
 }
 .metrics-strip .circle-graph p {
 	text-align: center;
-  padding: 10px;
+  padding: 16px;
   z-index: 100;
   line-height: 17px;
+  width:150px;
 }
 .circle-graph canvas {
   position: absolute;
@@ -168,5 +161,5 @@ ul.countdown li span {
 
 .credits-strip {
   height:100px;
-  min-height:auto;
+  min-height:initial;
 }
