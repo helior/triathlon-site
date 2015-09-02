@@ -13,3 +13,8 @@
 - Style countdown
 - describe the cause
 - style testimonials
+
+
+Metrics:
+- screen orientation
+- quote displayed
