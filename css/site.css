@@ -31,6 +31,16 @@
   90% {background-color: hsla(133,50%,60%,0.2)}
   100% {background-color: hsla(90,50%,60%,0.2)}
 }
+@keyframes colors {
+  0% {background-color: hsla(65,50%,60%,0.2)}
+  15% {background-color: hsla(20,50%,60%,0.2)}
+  30% {background-color: hsla(355,50%,60%,0.2)}
+  45% {background-color: hsla(300,50%,60%,0.2)}
+  60% {background-color: hsla(230,50%,60%,0.2)}
+  75% {background-color: hsla(185,50%,60%,0.2)}
+  90% {background-color: hsla(133,50%,60%,0.2)}
+  100% {background-color: hsla(90,50%,60%,0.2)}
+}
 .color-cycle {
   -webkit-animation-direction: normal;
   -webkit-animation-duration: 18s;
