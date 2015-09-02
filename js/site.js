@@ -35,8 +35,6 @@ function numberWithCommas(x) {
     var ww = $(window).width();
     var bh = $(document).height();
     var wh = $(window).height();
-    var hh = $('header').innerHeight();
-    featureHeight = wh - hh;
     $('#hero').css({'height': wh + 'px'});
     var scale_h = $(window).width() / vid_w_orig;
     var scale_v = $(window).height() / vid_h_orig;
@@ -48,6 +46,7 @@ function numberWithCommas(x) {
     var $video = $('.video #video-bg video');
     $video.width(scale * vid_w_orig);
     $video.height(scale * vid_h_orig);
+
     var video_width = $video.width();
     var video_offset = ($video.width() - $(window).width()) / 2;
 
@@ -73,9 +72,7 @@ function numberWithCommas(x) {
     vid_h_orig = parseInt($('#video-bg video').attr('height'));
 
     heroresize();
-    if (devicejs.desktop()) {
-      $(window).resize(heroresize);
-    }
+    $(window).resize(heroresize);
 
     // Randomize hero quote.
     var quote = quotes[Math.floor(Math.random()*quotes.length)];
@@ -138,7 +135,7 @@ function numberWithCommas(x) {
   });
 
   $(window).load(function() {
-    $('.desktop.video #video-bg video').append('<source src="videos/triathlon.mp4" type="video/mp4"><source src="videos/triathlon.ogv" type="video/ogg"><source src="videos/triathlon.webm" type="video/webm">');
+    $('.desktop.video #video-bg video').append('<source src="http://donate.helior.info/videos/triathlon.mp4" type="video/mp4"><source src="http://donate.helior.info/videos/triathlon.webm" type="video/webm"><source src="http://donate.helior.info/videos/triathlon.ogv" type="video/ogg">');
     $('.desktop.video.no-videoh264 #video-bg video').css("display", "none");
     // todo: Mixpanel no-videoh264
   });
