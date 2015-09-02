@@ -138,7 +138,7 @@ function numberWithCommas(x) {
   });
 
   $(window).load(function() {
-    $('.desktop.video #video-bg video').append('<source src="videos/bike.mp4" type="video/mp4">');
+    $('.desktop.video #video-bg video').append('<source src="videos/triathlon.mp4" type="video/mp4"><source src="videos/triathlon.ogv" type="video/ogg"><source src="videos/triathlon.webm" type="video/webm">');
     $('.desktop.video.no-videoh264 #video-bg video').css("display", "none");
     // todo: Mixpanel no-videoh264
   });
