@@ -7,6 +7,42 @@
   margin-left: auto;
   margin-right: auto;
 }
+/*https://gist.github.com/dopa/7952215*/
+.color-cycle {
+  background-color: hsla(65,50%,50%,0.2) !important
+}
+@-webkit-keyframes colors {
+  0% {background-color: hsla(65,50%,60%,0.2)}
+  15% {background-color: hsla(20,50%,60%,0.2)}
+  30% {background-color: hsla(355,50%,60%,0.2)}
+  45% {background-color: hsla(300,50%,60%,0.2)}
+  60% {background-color: hsla(230,50%,60%,0.2)}
+  75% {background-color: hsla(185,50%,60%,0.2)}
+  90% {background-color: hsla(133,50%,60%,0.2)}
+  100% {background-color: hsla(90,50%,60%,0.2)}
+}
+@-moz-keyframes colors {
+  0% {background-color: hsla(65,50%,60%,0.2)}
+  15% {background-color: hsla(20,50%,60%,0.2)}
+  30% {background-color: hsla(355,50%,60%,0.2)}
+  45% {background-color: hsla(300,50%,60%,0.2)}
+  60% {background-color: hsla(230,50%,60%,0.2)}
+  75% {background-color: hsla(185,50%,60%,0.2)}
+  90% {background-color: hsla(133,50%,60%,0.2)}
+  100% {background-color: hsla(90,50%,60%,0.2)}
+}
+.color-cycle {
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 18s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: colors;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-direction: normal;
+  -moz-animation-duration: 30s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: colors;
+  -moz-animation-timing-function: ease
+}
 
 /*Common Helpers*/
 .strip {
@@ -18,7 +54,7 @@
   background:#fff;
 }
 .strip.tint{
-  background: rgba(15,30,29,0.3);
+  background-image: url(/images/dots.png);
 }
 
 div.wrapper {
@@ -43,10 +79,12 @@ div.wrapper {
   font-style: italic;
   font-size: 0.8em;
 }
-
+blockquote {
+  border-left-color: #6D6363;
+}
 /*Background Video*/
 #video-bg {
-  /*position: fixed;*/ /*This fixes the issue with mobile; background not appearing during scroll..*/
+  position: absolute; /*This fixes the issue with mobile; background not appearing during scroll..*/
   top: 0;
   left: 0;
   z-index: 0;
@@ -55,6 +93,7 @@ div.wrapper {
   overflow: hidden;
   zoom: 1;
 }
+.desktop #video-bg {position:fixed};
 .container-for-video {
   background: #FFF;
   position: relative;
@@ -72,8 +111,8 @@ div.wrapper {
 .container-for-video img {
   z-index: 0;
 }
-.video #video-bg img { /*Modernizr class*/
-  /*display: none;*/ /*Un-comment when Chrome video codec is available.*/
+.desktop.video #video-bg img { /*Modernizr class*/
+  display: none;
 }
 @media only screen and (min-width: 680px) {
   .home section.hero {
@@ -103,6 +142,7 @@ ul.countdown li span {
 .metrics-strip {
   background-color: #334B52;
   color:#9AABA7;
+  min-height:700px;
 }
 @media only screen and (max-width: 348px) { .metrics-strip {padding-bottom:30px;}}
 .metrics-strip a {
