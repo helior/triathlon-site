@@ -147,6 +147,9 @@ ul.countdown li span {
   font-size: 42px;
   font-weight:bold;
 }
+.history-strip a.donate-button {
+  background-color:#42BBD8;
+}
 
 /*Section: Metrics*/
 .metrics-strip {
@@ -191,9 +194,13 @@ ul.countdown li span {
 .message-strip {
   min-height:600px;
   height:initial;
-  color:#7893C3;
+  color:#6D7B88;
   background: #fff url(/images/incubator.jpg) center center no-repeat;
   background-size: cover;
+}
+
+.message-strip a {
+  color: #E91E63;
 }
 
 /*Section: Donate*/

@@ -1,7 +1,7 @@
 // Metrics
 var Metrics = {
-  totalRaised: 1250,
-  donationGoal: 800,
+  totalRaised: 250,
+  donationGoal: 2000,
   survivalCount: 13820,
   totalInflicted: 15780,
   deathRatebyDisease: 58,
@@ -17,7 +17,9 @@ var quotes = [
   "Give, but give until it hurts. <br><br>— Mother Teresa",
   "It's easier to take than to give. <br>It's nobler to give than to take. <br>The thrill of taking lasts a day. <br>The thrill of giving lasts a lifetime. <br><br>— John F. Marques",
   "What we spend, we lose. <br>What we keep will be left for others. <br>What we give away will be ours forever. <br><br>— David McGee",
-  "If you haven't done much giving in your life – try it and see how you feel afterwards. <br><br>— Michelle Moore"
+  "Every man must decide whether he will walk in the light of creative altruism or in the darkness of destructive selfishness. <br><br>- Martin Luther King Jr.",
+  "Let us try to teach generosity and altruism, because we are born selfish. <br><br>- Richard Dawkins",
+  "You and your fancy lives.. You should use some of that money to give back to humanity. You'll get a tax deduction, too! <br><br>- Abraham Lincoln (probably)"
 ];
 
 // Source: http://stackoverflow.com/a/2901298
