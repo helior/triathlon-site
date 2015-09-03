@@ -72,7 +72,6 @@ function numberWithCommas(x) {
     // Remove video if we're on non-deskop browsers.
     $('.tablet #video-bg video').remove();
     $('.mobile #video-bg video').remove();
-    // todo: Mixpanel non-deskop
 
     vid_w_orig = parseInt($('#video-bg video').attr('width'));
     vid_h_orig = parseInt($('#video-bg video').attr('height'));
@@ -82,7 +81,6 @@ function numberWithCommas(x) {
 
     // Randomize hero quote.
     var quote = quotes[Math.floor(Math.random()*quotes.length)];
-    // todo: Mixpanel quote
     $('.hero-blockquote').html(quote);
 
 
@@ -138,6 +136,13 @@ function numberWithCommas(x) {
       }
     });
 
+    mixpanel.track('page visit', {
+      'orientation': devicejs.landscape() ? 'landscape' : 'portrait',
+      'quote': quote,
+      'totalRaised': Metrics.totalRaised,
+      'donationGoal': Metrics.donationGoal,
+      'isDesktop': devicejs.desktop()
+    });
   });
 
   $(window).load(function() {
