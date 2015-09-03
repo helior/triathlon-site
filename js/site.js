@@ -69,6 +69,9 @@ function numberWithCommas(x) {
   }
 
   $(document).ready(function(){
+    // Used for tracking play count during a page visit.
+    var playCount = 0;
+
     // Remove video if we're on non-deskop browsers.
     $('.tablet #video-bg video').remove();
     $('.mobile #video-bg video').remove();
@@ -142,6 +145,21 @@ function numberWithCommas(x) {
       'totalRaised': Metrics.totalRaised,
       'donationGoal': Metrics.donationGoal,
       'isDesktop': devicejs.desktop()
+    });
+
+    var videoEl = document.getElementById('triathlon-video');
+    videoEl.onended = function (e) {
+      this.play();
+      playCount++;
+      mixpanel.track('videoEnded', {
+        'playCount': playCount
+      });
+    }
+
+    mixpanel.track_links('.donation-link', 'Clicked donation link', function(el) {
+      return {
+        'context': el.rel
+      };
     });
   });
 
