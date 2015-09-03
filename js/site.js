@@ -1,6 +1,6 @@
 // Metrics
 var Metrics = {
-  totalRaised: 495,
+  totalRaised: 635,
   donationGoal: 2000,
   survivalCount: 13820,
   totalInflicted: 15780,
