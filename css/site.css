@@ -124,9 +124,9 @@ blockquote {
 .desktop.video #video-bg img { /*Modernizr class*/
   display: none;
 }
-.mobile.video #video-bg img {
-  left:-470px;
-}
+.mobile.video #video-bg img {left:-470px;}
+.tablet.video #video-bg img {left:-50px;}
+
 @media only screen and (min-width: 680px) {
   .home section.hero {
     min-height: 500px;
