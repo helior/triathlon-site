@@ -208,7 +208,7 @@ ul.countdown li span {
   color: rgb(247, 210, 222);
   text-shadow: #6D1622 2px 2px 2px;
 }
-.message-strip a.donation-link {
+.message-strip a.donation-link-large {
   font-weight: 800;
   font-size: 45px;
 }
