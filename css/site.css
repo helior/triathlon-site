@@ -80,6 +80,7 @@ div.wrapper {
 
 .hero-blockquote {
   color:#fff;
+  font-weight: 400;
 }
 
 .reference-link {
@@ -197,13 +198,19 @@ ul.countdown li span {
 .message-strip {
   min-height:600px;
   height:initial;
-  color:#6D7B88;
+  color:#efefef;
+  text-shadow:#666 1px 1px 3px;
   background: #fff url(/images/incubator.jpg) center center no-repeat;
   background-size: cover;
 }
 
 .message-strip a {
-  color: #E91E63;
+  color: rgb(247, 210, 222);
+  text-shadow: #6D1622 2px 2px 2px;
+}
+.message-strip a.donation-link {
+  font-weight: 800;
+  font-size: 45px;
 }
 
 /*Section: Donate*/

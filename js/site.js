@@ -1,7 +1,7 @@
 // Metrics
 var Metrics = {
-  totalRaised: 1280,
-  donationGoal: 2000,
+  totalRaised: 25,
+  donationGoal: 1000,
   survivalCount: 13820,
   totalInflicted: 15780,
   deathRatebyDisease: 58,
@@ -13,13 +13,12 @@ Metrics.survivalRate = Math.ceil(Metrics.survivalCount / Metrics.totalInflicted 
 // Quotes
 var quotes = [
   "That is Salvation. To give of love inside.<br>To keep love of life, no matter what, and to give to others. <br>Generously.<br><br>— Sylvia Plath",
-  "For it is in giving that we receive. <br><br>— Frances of Assisi",
+  "If you want to save the children, you gotta give me your monies. <br><br>— Helior",
   "Give, but give until it hurts. <br><br>— Mother Teresa",
   "It's easier to take than to give. <br>It's nobler to give than to take. <br>The thrill of taking lasts a day. <br>The thrill of giving lasts a lifetime. <br><br>— John F. Marques",
   "What we spend, we lose. <br>What we keep will be left for others. <br>What we give away will be ours forever. <br><br>— David McGee",
   "Every man must decide whether he will walk in the light of creative altruism or in the darkness of destructive selfishness. <br><br>- Martin Luther King Jr.",
-  "Let us try to teach generosity and altruism, because we are born selfish. <br><br>- Richard Dawkins",
-  "You and your fancy lives.. You should use some of that money to give back to humanity. You'll get a tax deduction, too! <br><br>- Abraham Lincoln (probably)"
+  "You and your fancy lives.. You should use some of that money to give back to humanity. You'll get a tax deduction, too! <br><br>- Abraham Lincoln"
 ];
 
 // Source: http://stackoverflow.com/a/2901298
@@ -89,10 +88,10 @@ function numberWithCommas(x) {
 
     // Set coundown.
     $(".countdown").countdown({
-      date: "20 september 2015 6:00:00", // add the countdown's end date (i.e. 3 november 2012 12:00:00)
+      date: "25 august 2017 6:00:00", // add the countdown's end date (i.e. 3 november 2012 12:00:00)
       format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
     }, function() {
-      $('.countdown').remove();
+      // $('.countdown').remove();
     });
 
     window.scrollFireCallback = function() {
