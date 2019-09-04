@@ -1,7 +1,7 @@
 // Metrics
 var Metrics = {
-  totalRaised: 251,
-  donationGoal: 1000,
+  totalRaised: 250,
+  donationGoal: 10000,
   survivalCount: 13820,
   totalInflicted: 15780,
   deathRatebyDisease: 58,
@@ -88,7 +88,7 @@ function numberWithCommas(x) {
 
     // Set coundown.
     $(".countdown").countdown({
-      date: "17 september 2017 7:00:00", // add the countdown's end date (i.e. 3 november 2012 12:00:00)
+      date: "15 september 2019 7:00:00", // add the countdown's end date (i.e. 3 november 2012 12:00:00)
       format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
     }, function() {
       // $('.countdown').remove();
@@ -105,7 +105,7 @@ function numberWithCommas(x) {
     ]);
 
     $('.metric-value-donation-percent').text(Metrics.donationTotal + '%');
-    $('.metric-value-donation-goal').text('$' + Metrics.donationGoal);
+    $('.metric-value-donation-goal').text('$' + (Metrics.donationGoal).toLocaleString('en'));
 
     $('.circle-graph').easyPieChart({
       scaleColor: false,
