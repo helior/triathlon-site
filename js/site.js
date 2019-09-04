@@ -165,7 +165,7 @@ function numberWithCommas(x) {
   });
 
   $(window).load(function() {
-    $('.desktop.video #video-bg video').append('<source src="http://donate.helior.info/videos/triathlon.mp4" type="video/mp4"><source src="http://donate.helior.info/videos/triathlon.webm" type="video/webm"><source src="http://donate.helior.info/videos/triathlon.ogv" type="video/ogg">');
+    $('.desktop.video #video-bg video').append('<source src="http://donate.helior.info/videos/triathlon.webm" type="video/webm"><source src="http://donate.helior.info/videos/triathlon.mp4" type="video/mp4"><source src="http://donate.helior.info/videos/triathlon.ogv" type="video/ogg">');
     $('.desktop.video.no-videoh264 #video-bg video').css("display", "none");
     // todo: Mixpanel no-videoh264
   });
