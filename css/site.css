@@ -139,18 +139,32 @@ blockquote {
   height:800px;
 }
 ul.countdown {
-  margin:0;
+  margin:0 auto;
+  width:200px;
   list-style:none;
 }
 ul.countdown li {
-  width:24%;
-  display:inline-block;
   text-align:center;
 }
-ul.countdown li span {
-  font-size: 42px;
+ul.countdown li .number {
+  font-size: 60px;
   font-weight:bold;
 }
+
+ul.countdown li .seconds {
+  animation: beat .5s infinite alternate;
+  transform-origin: center;
+  color:#de4848;
+}
+
+@keyframes beat{
+	to { transform: scale(1.1); color:red}
+}
+
+ul.countdown p {
+  margin: 0;
+}
+
 .history-strip a.donate-button {
   background-color:#42BBD8;
 }
@@ -178,8 +192,9 @@ ul.countdown li span {
 .metrics-strip .circle-graph {
 	margin: 30px auto;
   position:relative;
-  width:150px;
-  height:150px;
+  width:350px;
+  height:350px;
+  font-size:19px;
 }
 .metrics-strip .circle-graph p {
 	text-align: center;
@@ -226,4 +241,15 @@ ul.countdown li span {
 .credits-strip {
   height:100px;
   min-height:initial;
+}
+
+@keyframes heartbeat{
+	to { transform: scale(1.1); color:red}
+}
+
+.credits-strip .love {
+  animation: heartbeat .5s infinite alternate;
+  transform-origin: center;
+  color:#ff3e3e;
+  display:inline-block;
 }

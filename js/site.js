@@ -91,14 +91,15 @@ function numberWithCommas(x) {
       date: "15 september 2019 7:00:00", // add the countdown's end date (i.e. 3 november 2012 12:00:00)
       format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
     }, function() {
-      // $('.countdown').remove();
+      $('.history-strip p.flow-text').text("Wish me luck!");
+      $('.countdown').html('<li><p class="number">😁</p></li>');
     });
 
     window.scrollFireCallback = function() {
-      window.setTimeout(function() {$('.metric-treatment-count').data('easyPieChart').update(100);}, 100);
-      window.setTimeout(function() {$('.metric-death-rate').data('easyPieChart').update(Metrics.deathRatebyDisease);}, 400);
-      window.setTimeout(function() {$('.metric-survival-odds').data('easyPieChart').update(12.5);}, 700);
-      window.setTimeout(function() {$('.metric-total-raised').data('easyPieChart').update(Metrics.donationTotal);}, 1000);
+      // window.setTimeout(function() {$('.metric-treatment-count').data('easyPieChart').update(100);}, 100);
+      // window.setTimeout(function() {$('.metric-death-rate').data('easyPieChart').update(Metrics.deathRatebyDisease);}, 400);
+      // window.setTimeout(function() {$('.metric-survival-odds').data('easyPieChart').update(12.5);}, 700);
+      window.setTimeout(function() {$('.metric-total-raised').data('easyPieChart').update(Metrics.donationTotal);}, 400);
     }
     Materialize.scrollFire([
       {selector: '.metrics-strip', offset:350, callback: 'scrollFireCallback()'}
@@ -106,6 +107,7 @@ function numberWithCommas(x) {
 
     $('.metric-value-donation-percent').text(Metrics.donationTotal + '%');
     $('.metric-value-donation-goal').text('$' + (Metrics.donationGoal).toLocaleString('en'));
+    $('.metric-extra .metric-total-raised').text('$' + (Metrics.totalRaised).toLocaleString('en'));
 
     $('.circle-graph').easyPieChart({
       scaleColor: false,
@@ -113,7 +115,7 @@ function numberWithCommas(x) {
       lineCap: 'round',
       barColor: '#FD777F',
       trackColor: '#525252' ,
-      size: 150,
+      size: 350,
       // animate: 1500,
       animate: {duration: 1000, enabled: true},
       onStep: function(from, to, currentValue) {
@@ -148,14 +150,14 @@ function numberWithCommas(x) {
       'isDesktop': devicejs.desktop()
     });
 
-    var videoEl = document.getElementById('triathlon-video');
-    videoEl.onended = function (e) {
-      this.play();
-      playCount++;
-      mixpanel.track('videoEnded', {
-        'playCount': playCount
-      });
-    }
+    // var videoEl = document.getElementById('triathlon-video');
+    // videoEl.onended = function (e) {
+    //   this.play();
+    //   playCount++;
+    //   mixpanel.track('videoEnded', {
+    //     'playCount': playCount
+    //   });
+    // }
 
     mixpanel.track_links('.donation-link', 'Clicked donation link', function(el) {
       return {
@@ -164,10 +166,10 @@ function numberWithCommas(x) {
     });
   });
 
-  $(window).load(function() {
-    $('.desktop.video #video-bg video').append('<source src="http://donate.helior.info/videos/triathlon.webm" type="video/webm"><source src="http://donate.helior.info/videos/triathlon.mp4" type="video/mp4"><source src="http://donate.helior.info/videos/triathlon.ogv" type="video/ogg">');
-    $('.desktop.video.no-videoh264 #video-bg video').css("display", "none");
-    // todo: Mixpanel no-videoh264
-  });
+  // $(window).load(function() {
+  //   $('.desktop.video #video-bg video').append('<source src="http://donate.helior.info/videos/triathlon.webm" type="video/webm"><source src="http://donate.helior.info/videos/triathlon.mp4" type="video/mp4"><source src="http://donate.helior.info/videos/triathlon.ogv" type="video/ogg">');
+  //   $('.desktop.video.no-videoh264 #video-bg video').css("display", "none");
+  //   // todo: Mixpanel no-videoh264
+  // });
 
 })(jQuery);
