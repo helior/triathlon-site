@@ -134,6 +134,23 @@ blockquote {
   }
 }
 
+/*Section: Meme*/
+.meme-strip {
+  /* height:800px; */
+  padding-top: 50px;
+}
+
+.meme-strip img {
+  transform: rotate(-3deg);
+  box-shadow: #aaa 0px 1px 3px;
+  border: #fff 12px solid;
+  width: 400px;
+}
+.meme-strip figcaption {
+  color:#ccc;
+  font-size:11px;
+}
+
 /*Section: History*/
 .history-strip {
   height:800px;
